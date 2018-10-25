@@ -1,2 +1,2 @@
 # Project-Eight
-Single page using css grid
+Single page using CSS GRID
