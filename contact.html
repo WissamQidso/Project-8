@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name="keywords" content="homePage"/>
+      <meta name="description" content="page-1"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      
+      <title>Contact</title>
+      
+      <link rel="stylesheet" type="text/css" href="syntax.css"/>
+      <link rel="shortcut icon" type="image.png" href="images/shortcut-icon.png">
+   </head>
+   <body>
+      <header id="page-header">
+            <a href="index.html" class="header-logo">B. Bakery</a>
+            <span id="phone">+123.456.789.0</span>
+            <span id="E-mail">info@website.com</span>
+            <a href="https://www.facebook.com/" target="_blank" id="facebook"></a>
+            <a href="https://twitter.com/?lang=en" target="_blank" id="twitter"></a>
+            <span class="burger-nav"></span>
+            <div class="dropdown-menu">
+                <div class="menu-content">
+                    <ul class="menu">
+                        <li><a href="index.html" id="home" >home</a></li>
+                        <li><a href="about.html" target="_blank">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="#">services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+           <form name="myForm">
+              <label for="name">Name:</label>
+              <input id="name" type="text" required/><br>
+              <label for="gender">Gender:</label><br>
+              <input  id="male" type="radio" name="gender"/>
+              <label for="male">Male</label>
+              <input id="female" type="radio" name="gender"/>
+              <label for="female">Female</label><br>
+              <label for="message">Message:</label><br>
+              <textarea placeholder="Write a review"></textarea>
+              <button type="submit" value="Send">Send</button>
+           </form>
+        </main>
+        
+      <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+      </script>
+      <script>
+         $(document).ready(function(){
+            $("span.burger-nav").on("click", function(){
+               $(".dropdown-menu").toggleClass("opened");
+            });
+         });
+
+         $(document).ready(function(){
+             $("span.burger-nav").on("click", function(){
+                 $(this).toggleClass("opened");
+             });  
+         });
+      </script>
+   </body>
+</html>
