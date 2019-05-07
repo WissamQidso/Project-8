@@ -61,28 +61,50 @@ window.onload = function(){
    
 };
 
+var feature = document.querySelectorAll("#sections .feature");
+
 var kaick = document.querySelector("#cake");
 var samm = document.querySelector("#sammoun");
 var cupCake = document.querySelector("#cup-cake");
 
-var cake = document.querySelector(".img-1");
-var sammoun = document.querySelector(".img-3");
-var cupp = document.querySelector(".img-6");
+var cake = document.querySelectorAll("#menu .a");
+var sammoun = document.querySelectorAll("#menu .b");
+var cupp = document.querySelectorAll("#menu .c");
 
-kaick.onclick = function(){
-   cake.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
-   sammoun.style.boxShadow = "none";
-   cupp.style.boxShadow = "none";
-};
+Array.from(feature).forEach(function(e){
+   
+   e.addEventListener("change", function(i){
+      if(kaick.checked){
+         Array.from(cake).forEach(function(a){
+            a.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
+         });
+         Array.from(sammoun).forEach(function(a){
+            a.style.boxShadow = "none";
+         });
+         Array.from(cupp).forEach(function(a){
+            a.style.boxShadow = "none";
+         }); 
+      } else if(samm.checked){
+         Array.from(sammoun).forEach(function(a){
+            a.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
+         }); 
+         Array.from(cake).forEach(function(a){
+            a.style.boxShadow = "none";
+         });
+         Array.from(cupp).forEach(function(a){
+            a.style.boxShadow = "none";
+         });
+      } else if(cupCake.checked){
+         Array.from(cupp).forEach(function(a){
+            a.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
+         }); 
+         Array.from(cake).forEach(function(a){
+            a.style.boxShadow = "none";
+         });
+         Array.from(sammoun).forEach(function(a){
+            a.style.boxShadow = "none";
+         });       
+      }     
+   });
+});
 
-samm.onclick = function(){
-   cake.style.boxShadow = "none";
-   sammoun.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
-   cupp.style.boxShadow = "none";
-};
-
-cupCake.onclick = function(){
-   cake.style.boxShadow = "none";
-   sammoun.style.boxShadow = "none";
-   cupp.style.boxShadow = "-1px -1px 4px 4px #83b6dc";
-};
