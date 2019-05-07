@@ -987,7 +987,7 @@ main button:hover{
     }
 
     main img{
-        width: 85%;
+       width: 85%;
     }
 
     .img-1{
@@ -996,30 +996,37 @@ main button:hover{
 
     .img-2{
         grid-column: 1 / 13;
+        grid-row: 2 / 3;
     }
 
     .img-3{
         grid-column: 1 / 13;
+        grid-row: 3 / 4;
     }
 
     .img-4{
         grid-column: 1 / 13;
+        grid-row: 4 / 5;
     }
 
     .img-5{
         grid-column: 1 / 13;
+        grid-row: 5 / 6;
     }
 
     .img-6{
         grid-column: 1 / 13;
+        grid-row: 6 / 7;
     }
 
     .img-7{
         grid-column: 1 / 13;
+        grid-row: 7 / 8;
     }
 
     .img-8{
         grid-column: 1 / 13;
+        grid-row: 8 / 9;
     }
 
     .section-2 p {
